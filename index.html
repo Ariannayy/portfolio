@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arianna Di Serio – Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+
+  <header class="hero">
+    <div class="line line--top"></div>
+    <!-- Menu -->
+    <nav class="nav">
+      <a href="#" class="nav__link active">HOME</a>
+      <a href="./projects.html" class="nav__link">PORTFOLIO</a>
+    </nav>
+
+    <!-- Titolo centrale -->
+    <div class="hero__center">
+      <h1 class="hero__title">
+        PORTFOLIO
+        <span class="hero__signature">Arianna Di Serio</span>
+      </h1>
+    </div>
+
+    <div class="hero__footer">
+      <span class="year">2026</span>
+      <div class="line line--bottom"></div>
+    </div>
+  </header>
+
+  <!-- MENU FOLDERS -->
+<section class="explorer" id="portfolio">
+  <div class="explorer__inner">
+
+    <!-- Search bar -->
+    <div class="searchBar" role="search" aria-label="Search portfolio">
+      <img
+        src="./img/lente.png"
+        alt=""
+        class="searchBar__icon"
+        aria-hidden="true"
+      />
+
+      <div class="searchBar__text">
+        <span id="typeText"></span><span class="caret"></span>
+      </div>
+    </div>
+
+    <!-- Folders -->
+    <div class="folders">
+      <a class="folder" href="#about">
+        <img src="./img/folder.png" alt="About me" />
+        <p>ABOUT ME</p>
+      </a>
+
+      <a class="folder" href="#education">
+        <img src="./img/folder.png" alt="Esperienze" />
+        <p>ESPERIENZE</p>
+      </a>
+
+      <a class="folder" href="#skills">
+        <img src="./img/folder.png" alt="Skills e altro" />
+        <p>SKILLS</p>
+      </a>
+
+      <a class="folder" href="#corsi">
+        <img src="img/folder.png" alt="Certificazioni e pubblicazioni" />
+        <p>CERTIFICAZIONI E PUBBLICAZIONI</p>
+      </a>
+
+      <a class="folder" href="#works">
+        <img src="img/folder.png" alt="I miei lavori" />
+        <p>I MIEI LAVORI</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+
+  <div class="about__grid">
+    <!-- LEFT -->
+    <div class="about__left">
+      <h2 class="about__title">ABOUT ME</h2>
+
+      <p class="about__text">
+        <strong>Borsista di ricerca</strong> presso il Consiglio Nazionale delle Ricerche
+        CNR-ISTI (HIIS Lab) di Pisa, nell'ambito del progetto “UIST – User Interface
+        Software and Technologies”.<br><br>
+
+        Ho una formazione accademica in <strong>Informatica Umanistica</strong>, che mi
+        ha permesso di sviluppare un <strong>profilo multidisciplinare</strong>, capace di
+        unire competenze tecniche e umanistiche. Durante il mio percorso ho maturato
+        esperienze diversificate: ricerca accademica, realizzazione siti web e grafiche,
+        programmazione e analisi dei dati, data journalism, ambienti virtuali, editoria
+        digitale e altro ancora.<br><br>
+
+        Mi appassiona lavorare in contesti interdisciplinari, dove la tecnologia diventa
+        uno strumento per migliorare l'accessibilità, la comunicazione e l'esperienza dell'utente.
+      </p>
+
+      <a class="about__cvBtn anim-up" href="https://drive.google.com/file/d/1egacxXFqIkGX8vK3tXuEezpllwktY8So/view" target="_blank" rel="noreferrer">
+        CV 2026
+      </a>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="about__right">
+      <div class="about__photoWrap">
+        <img class="about__photo anim-up" src="./img/profilesc.png" alt="Foto profilo" />
+      </div>
+
+      <img class="about__arrow" src="./img/arrow.png" alt="" aria-hidden="true" />
+
+      <!-- contact card -->
+      <div class="contactCard anim-right">
+        <div class="contactRow">
+          <img class="contactIcon" src="./img/compleanno.jpg" alt="torta compleanno" aria-hidden="true" />
+          <span>14/02/1999</span>
+        </div>
+
+        <div class="contactRow">
+          <img class="contactIcon" src="./img/mail.jpg" alt="email" aria-hidden="true" />
+          <span>dsnarianna14@gmail.com</span>
+        </div>
+
+        <div class="contactRow">
+          <img class="contactIcon" src="./img/phone.jpg" alt="telefono" aria-hidden="true" />
+          <span>3931272072</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--ISTRUZIONE-->
+<section class="edu" id="education">
+  <h2 class="edu__title anim-right">ISTRUZIONE</h2>
+
+  <div class="edu__timeline">
+    <div class="edu__line"></div>
+
+    <div class="edu__point" style="--x: 16%;">
+      <div class="edu__year">2017/2018</div>
+      <div class="edu__dot"></div>
+      <div class="edu__card">
+        <h3>LICEO SCIENTIFICO</h3>
+        <p>I.S.I.S “Majorana-Fascitelli”<br>Isernia (IS)</p>
+        <p class="edu__grade">Voto: 97/100</p>
+      </div>
+    </div>
+
+    <div class="edu__point" style="--x: 50%;">
+      <div class="edu__year">2020/2021</div>
+      <div class="edu__dot"></div>
+      <div class="edu__card">
+        <h3>UNIVERSITÀ DI PISA</h3>
+        <p>Laurea triennale in<br>Informatica Umanistica (L-10)</p>
+        <p class="edu__grade">Voto: 110 e Lode</p>
+      </div>
+    </div>
+
+    <div class="edu__point" style="--x: 84%;">
+      <div class="edu__year">2023/2024</div>
+      <div class="edu__dot"></div>
+      <div class="edu__card">
+        <h3>UNIVERSITÀ DI PISA</h3>
+        <p>Laurea magistrale in<br>Informatica Umanistica (LM-43)</p>
+        <p class="edu__grade">Voto: 110 e Lode</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--ESPERIENZE LAVORATIVE-->
+<section class="xp" id="experience">
+  <div class="xp__wrap">
+
+    <div class="xp__leftTitle">
+      <h2>ESPERIENZE<br> LAVORATIVE</h2>
+    </div>
+
+    <div class="xp__timeline" id="xpTimeline">
+      <!-- linea: base + progress -->
+      <div class="xp__line"></div>
+      <div class="xp__lineProgress" id="xpLineProgress"></div>
+
+      <article class="xp__item reveal">
+        <div class="xp__dot"></div>
+        <div class="xp__content">
+          <div class="xp__meta">
+            <span>CNR - ISTI | <a href="https://giove.isti.cnr.it/lab/people">Laboratorio HIIS</a> | Pisa (PI)</span>
+          </div>
+          <div class="xp__date">Gennaio 2026 - Presente</div>
+          <h3>Borsista di Ricerca</h3>
+          <p>Borsista di ricerca nell'ambito del progetto “UIST – User Interface Software and Technologies”.</p>
+        </div>
+      </article>
+
+      <article class="xp__item reveal">
+        <div class="xp__dot"></div>
+        <div class="xp__content">
+          <div class="xp__meta">
+            <span>CNR - ISTI | <a href="https://giove.isti.cnr.it/lab/people">Laboratorio HIIS</a> | Pisa (PI)</span>
+          </div>
+          <div class="xp__date">Maggio 2024 - Dicembre 2025</div>
+          <h3>Assegnista di Ricerca</h3>
+          <p>Progetto di ricerca nell'ambito dell'IoT, sicurezza e usabilità… (SERICS, spoke 1).</p>
+        </div>
+      </article>
+
+      <article class="xp__item reveal">
+        <div class="xp__dot"></div>
+        <div class="xp__content">
+          <div class="xp__meta">
+            <span>…da Vi Travels di Stefania Tielli | Vinci (FI)</span>
+          </div>
+          <div class="xp__date">2022 - 2023</div>
+          <h3>Web developer e web designer</h3>
+          <p>Realizzazione e gestione in Wordpress, test di usabilità, aggiornamenti, grafiche e captions.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="bottomGrid" id="xpTimeline2">
+      <div class="xp__smallList">
+        <article class="xp__item reveal">
+          <div class="xp__dot"></div>
+          <div class="xp__date">Giugno 2025</div>
+          <div class="xp__meta">
+            <span>Comune di Isernia (IS)</span>
+          </div>
+          <p>Presidente di seggio elettorale (Referendum 2025)</p>
+        </article>
+        <article class="xp__item reveal">
+          <div class="xp__dot"></div>
+          <div class="xp__date">Giugno 2024 - Presente</div>
+          <div class="xp__meta">
+            <span>Volontariato | Vastogirardi (IS)</span>
+          </div>
+          <p>Socio Pro Loco di Vastogirardi</p>
+        </article>
+      </div>
+      <div class="xp__line"></div>
+      <div class="xp__lineProgress" id="xpLineProgress2"></div>
+    </div>
+
+    <div class="xp__rightTitle">
+      <h2>INCARICHI E<br> VOLONTARIATO</h2>
+    </div>
+
+  </div>
+</section>
+
+<!--SKILLS-->
+<section class="skills" id="skills">
+  <h2 class="skills__title anim-up">SKILLS</h2>
+  <div class="skills__grid">
+    <div class="skillCard">
+      <div class="skillCard__icon">
+        <img src="./img/webdesign.png" alt="Web design">
+      </div>
+      <p class="skillCard__label">Web Design</p>
+    </div>
+    <div class="skillCard">
+      <div class="skillCard__icon">
+        <img src="./img/ux.png" alt="UX / UI Design">
+      </div>
+      <p class="skillCard__label">UX / UI Design</p>
+    </div>
+    <div class="skillCard">
+      <div class="skillCard__icon">
+        <img src="./img/graphic.png" alt="Graphic design">
+      </div>
+      <p class="skillCard__label">Graphic design</p>
+    </div>
+        <div class="skillCard">
+      <div class="skillCard__icon">
+        <img src="./img/HTML5_logo.png" alt="HTML">
+      </div>
+      <p class="skillCard__label">HTML</p>
+    </div>
+        <div class="skillCard">
+      <div class="skillCard__icon">
+        <img src="./img/css_logo.png" alt="CSS">
+      </div>
+      <p class="skillCard__label">CSS</p>
+    </div>
+    <div class="skillCard">
+      <div class="skillCard__icon">
+        <img src="./img/javascript_logo.png" alt="Javascript">
+      </div>
+      <p class="skillCard__label">Javascript</p>
+    </div>
+    <div class="skillCard">
+      <div class="skillCard__icon">
+        <img src="./img/python_logo.jpg" alt="Python">
+      </div>
+      <p class="skillCard__label">Python</p>
+    </div>
+    <div class="skillCard">
+      <div class="skillCard__icon">
+        <img src="./img/java_logo.jpg" alt="Java">
+      </div>
+      <p class="skillCard__label">Java</p>
+    </div>
+    <div class="skillCard">
+      <div class="skillCard__icon">
+        <img src="./img/seo.png" alt="SEO">
+      </div>
+      <p class="skillCard__label">SEO</p>
+    </div>
+    <div class="skillCard">
+      <div class="skillCard__icon">
+        <img src="./img/adobe.jpg" alt="adobe">
+      </div>
+      <p class="skillCard__label">Adobe</p>
+    </div>
+    <div class="skillCard">
+      <div class="skillCard__icon">
+        <img src="./img/Figma.png" alt="figma">
+      </div>
+      <p class="skillCard__label">Figma</p>
+    </div>
+    <div class="skillCard">
+      <div class="skillCard__icon">
+        <img src="./img/canva logo.png" alt="canva">
+      </div>
+      <p class="skillCard__label">Canva</p>
+    </div>
+  </div>
+</section>
+
+<!--CERTIFICAZIONI-->
+<section id="corsi">
+  <h2 class="anim-left">CORSI <br/>e CERTIFICAZIONI</h2>
+  <div class="grid_corsi">
+    <div> 
+      <div id="corsi1">
+        <div class="xp__meta">
+          <span>UX Box | 2026</span>
+        </div>
+        <p>UX Fundamentals</p>
+      </div>
+      <div id="corsi2">
+        <div class="xp__meta">
+          <span>Accademia Domani | 2025</span>
+        </div>
+        <ul>
+          <li class="elencoCorsi">Adobe InDesign</li>
+          <li class="elencoCorsi">Graphic Design</li>
+          <li class="elencoCorsi">Design Thinking</li>
+          <li class="elencoCorsi">Instagram Marketing</li>
+          <li class="elencoCorsi">React & Redux</li>
+          <li class="elencoCorsi">SEO</li>
+          <li class="elencoCorsi">Social Media Manager</li>
+          <li class="elencoCorsi">Woocommerce con Wordpress</li>
+        </ul>
+      </div>
+    </div> 
+    <img class="cert_photo anim-down" id="scontrino" src="./img/scontrino.png" alt="lista Certificazioni"/>
+  </div>
+  
+</section>
+
+<!--PUBBLICAZIONI-->
+<section id="pubblicazioni">
+  <h2>PUBBLICAZIONI</h2>
+  <div id="pub_grid">
+    <img src="./img/pc.png" alt ="computer" id="imgPC"/>
+    <div id="pubb">
+      <ul>
+        <li><a class="linkP" href="https://doi.org/10.1145/3771882.3771909">Human Control of Privacy and Security Aspects in IoT Settings</a>. In Proceedings of 
+          the 24th International Conference on Mobile and Ubiquitous Multimedia (MUM '25).</li>
+        <li><a class="linkP" href="https://doi.org/10.1145/3750069.3750318">SecureTAP: A 
+          Conversational Agent for Secure and Privacy-Aware Smart Automations</a>. 
+          In: CHItaly '25: Proceedings of the 16th Biannual Conference of the Italian SIGCHI Chapter. </li>
+        <li><a class="linkP" href="https://doi.org/10.1007/978-3-031-93505-3_11">How Well can a Wristband Provide Information About a Person's Emotional State?</a>In: Duffy, V.G. (eds) Digital Human Modeling and
+          Applications in Health, Safety, Ergonomics and Risk Management. HCII 2025.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!--FOOTER-->
+<footer>
+  <p>Web Site Developed and Designed by <strong><a href="www.linkedin.com/in/arianna-di-serio-311696240">Arianna Di Serio</a></strong></p>
+</footer>
+
+ <script src="script.js"></script>
+</body>
+</html>
