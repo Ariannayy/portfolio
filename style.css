@@ -803,10 +803,6 @@ footer p strong a:hover{
     gap: 22px;
     padding: 0 24px;
   }
-  .about__grid{
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
   .about__right{
     min-height: 420px;
   }
@@ -837,16 +833,15 @@ footer p strong a:hover{
 
   .folder { width: min(360px, 44vw); }
 }
-
-@media (max-width: 740px){
-  .skills__grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
-}
-@media (max-width: 650px){
-  .line--bottom, .line--top{
-    width: 140px;
+@media (max-width: 850px){
+  .hero__title{
+    font-size: 6em;
   }
-  .hero{
-    height: 80vh;
+  .hero__signature{
+    font-size: clamp(4rem, 5vw, 4.5rem);
+  }
+  .year{
+    margin-top: -15%;
   }
   .folders{
     grid-template-columns: repeat(2, 1fr);
@@ -865,39 +860,43 @@ footer p strong a:hover{
     padding-right: 5px;
     font-size: 15px;
   }
+  .explorer__inner {
+    max-width: 90%;
+    padding: 0 0px;
+  }
   .about__photoWrap{
+    justify-content: center;
     width: 70%;
     margin-left: 15%;
-    margin-top: -15%;
+    margin-top: 30%;
+  }
+  .about__grid{
+  grid-template-columns: 60% 35%;
+  gap: 5%;
+  }
+  .about__title{
+    font-size: clamp(60px, 7vw, 92px);
   }
   .contactCard {
-    height: fit-content;
-    width: 80%;
-    margin-top: 0%;
+    margin-top: -5%;
+    width: fit-content;
+  }
+  .contactRow{
+    font-size: 14px;
   }
   .edu__dot{
-    width: 15px;
-    height: 15px;
     margin-top: 15px;
   }
-  .edu__card h3{
-    font-size: 16px;
-  }
-  .edu{
-    height: 80vh;
-  }
-  .edu__title {
-    padding: 0;
-    margin: 0;
-    text-align: center;
+  #skills{
+    padding-top: 10px;
+    padding-bottom: 8%;
   }
   /* titolo prima della lista */
   .xp__rightTitle{
     order: 0;
-    margin-bottom: 24px;
+    margin-bottom: 10px;
     text-align: left;
   }
-
   .bottomGrid{
     position: relative;
     padding: 10px 0 10px 34px;
@@ -914,7 +913,6 @@ footer p strong a:hover{
     right: auto;
     transform: none;
   }
-
   .bottomGrid .xp__smallList{
     text-align: left;
     padding-left: 22px;
@@ -937,11 +935,204 @@ footer p strong a:hover{
   .xp__timeline{ grid-area: timeline; }
   .xp__rightTitle{ grid-area: rightTitle; }
   .bottomGrid{ grid-area: bottomGrid; }
-  .xp__rightTitle h2{
+  #corsi{
+    padding: 0px 30px;
+  }
+  .grid_corsi {
+    grid-template-columns: 50% 50%;
+}
+  #scontrino {
+    width: 95%;
+    margin-left: 15%;
+    margin-top: -35%;
+  }
+  #pubb{
+    width: 100%;
+    padding-left: 20px;
+  }
+}
+
+
+@media (max-width: 740px){
+  .skills__grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .hero__title{
+    font-size: 4em;
+  }
+  .hero__signature{
+    font-size: clamp(3rem, 5vw, 4.5rem);
+  }
+  .folders{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: none; 
+    justify-items: center;
+  }
+  .folder{
+    width: 80%;
+    grid-area: auto !important; 
+    grid-column: auto !important;
+    justify-self: center;
+  }
+  .folder p{
+    width: fit-content;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 15px;
+  }
+  .about__grid{
+    padding-top: 10px;
+    display: block;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "about__left"
+      "about__right";
+    row-gap: 24px;
+  }
+  .about__title{
     text-align: center;
   }
+  .about__photoWrap{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: -10%;
+  }
+  .contactCard {
+    height: fit-content;
+    width: 60%;
+    margin-top: 0%;
+  }
+  .edu__title {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  .edu__dot{
+    width: 18px;
+    height: 18px;
+    margin-top: 15px;
+  }
+  .xp__wrap{
+    display: block;
+  }
+  .xp__leftTitle h2{
+    text-align: center;
+    width: 100%;
+  }
+  /* titolo prima della lista */
+  .xp__rightTitle{
+    order: 0;
+    margin-bottom: 24px;
+    text-align: left;
+  }
+  .bottomGrid{
+    position: relative;
+    padding: 10px 0 10px 34px;
+  }
+
+  /* linea a SINISTRA */
+  .bottomGrid .xp__line,
+  .bottomGrid .xp__lineProgress{
+    left: 12px;
+    right: auto;
+  }
+  .bottomGrid .xp__dot{
+    left: -6px;               
+    right: auto;
+    transform: none;
+  }
+  .bottomGrid .xp__smallList{
+    text-align: left;
+    padding-left: 22px;
+    padding-right: 0;
+  }
+  .xp__smallList .xp__item .xp__dot{
+    left: -50px;
+  }
+  .xp__wrap{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "leftTitle"
+      "timeline"
+      "rightTitle"
+      "bottomGrid";
+    row-gap: 24px;
+  }
+  .xp__leftTitle{ grid-area: leftTitle; }
+  .xp__timeline{ grid-area: timeline; }
+  .xp__rightTitle{ grid-area: rightTitle; }
+  .bottomGrid{ grid-area: bottomGrid; }
+
   #experience{
     padding-bottom: 0;
+  }
+  #skills{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  #corsi{
+    padding: 0px 20px;
+  }
+  #corsi h2{
+    text-align: center;
+  }
+  .grid_corsi{
+    width: 90%;
+    margin-left: 5%;
+    display: block;
+    text-align: center;
+  }
+  #corsi2 ul{
+    padding-left: 0;
+  }
+  #scontrino {
+    display: none;
+  }
+  #pub_grid img{
+    width: 100%;;
+  }
+  #pubb{
+    width: 100%;
+    padding-left: 20px;
+  }
+  .about__text{
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+  }
+  .about__cvBtn {
+    margin-left: 40%;
+    width: 20%;
+  }
+}
+
+
+@media (max-width: 650px){
+  .line--bottom, .line--top{
+    width: 140px;
+  }
+  .hero{
+    height: 80vh;
+  }
+  .about__photoWrap{
+    width: 70%;
+    margin-left: 15%;
+    margin-top: -15%;
+  }
+  .contactCard {
+    height: fit-content;
+    width: 80%;
+  }
+  .edu__dot{
+    width: 15px;
+    height: 15px;
+    margin-top: 15px;
+  }
+  .edu__card h3{
+    font-size: 16px;
+  }
+  .edu{
+    height: 80vh;
   }
   #corsi{
     padding: 0px 20px;
@@ -960,14 +1151,21 @@ footer p strong a:hover{
   #pubb ul li {
     font-size: 14px;
   }
-  #pub_grid img{
-    width: 100%;;
+  .xp__rightTitle{
+    margin-bottom: 2%;
   }
-  #pubb{
-    width: 100%;
-    padding-left: 20px;
+  #corsi{
+    margin-top: 2%;
+  }
+  .grid_corsi{
+    text-align: center;
+  }
+  #corsi ul{
+    padding-left: 0;
   }
 }
+
+
 @media (max-width: 520px){
   .skills__grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .skillCard{ width: 150px; }
