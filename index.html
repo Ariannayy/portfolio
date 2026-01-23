@@ -9,8 +9,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
- 
+
 </head>
 <body>
 
@@ -180,19 +181,22 @@
   </div>
 </section>
 
-<!--ESPERIENZE LAVORATIVE-->
+<!-- ESPERIENZE + INCARICHI (TIMELINE UNICA) -->
 <section class="xp" id="experience">
   <div class="xp__wrap">
 
+    <!-- Titolo sinistra -->
     <div class="xp__leftTitle">
       <h2>ESPERIENZE<br> LAVORATIVE</h2>
     </div>
 
+    <!-- Timeline unica -->
     <div class="xp__timeline" id="xpTimeline">
-      <!-- linea: base + progress -->
+      <!-- linea: base + progress (UNA SOLA) -->
       <div class="xp__line"></div>
       <div class="xp__lineProgress" id="xpLineProgress"></div>
 
+      <!-- ============ ESPERIENZE LAVORATIVE ============ -->
       <article class="xp__item reveal">
         <div class="xp__dot"></div>
         <div class="xp__content">
@@ -213,7 +217,7 @@
           </div>
           <div class="xp__date">Maggio 2024 - Dicembre 2025</div>
           <h3>Assegnista di Ricerca</h3>
-          <p>Progetto di ricerca nell'ambito dell'IoT, sicurezza e usabilità… (SERICS, spoke 1).</p>
+          <p>Progetto di ricerca nell'ambito dell'IoT, sicurezza e usabilità (SERICS, spoke 1).</p>
         </div>
       </article>
 
@@ -228,37 +232,41 @@
           <p>Realizzazione e gestione in Wordpress, test di usabilità, aggiornamenti, grafiche e captions.</p>
         </div>
       </article>
-    </div>
 
-    <div class="bottomGrid" id="xpTimeline2">
-      <div class="xp__smallList">
-        <article class="xp__item reveal">
-          <div class="xp__dot"></div>
+      <!-- Separatore / intestazione sezione (non agganciata al dot) -->
+      <div class="xp__sectionDivider" aria-hidden="true"></div>
+      <article class="xp__item xp__item--compact reveal">
+        <div class="xp__dot"></div>
+        <div class="xp__content">
           <div class="xp__date">Giugno 2025</div>
           <div class="xp__meta">
             <span>Comune di Isernia (IS)</span>
           </div>
           <p>Presidente di seggio elettorale (Referendum 2025)</p>
-        </article>
-        <article class="xp__item reveal">
-          <div class="xp__dot"></div>
+        </div>
+      </article>
+
+      <article class="xp__item xp__item--compact reveal">
+        <div class="xp__dot"></div>
+        <div class="xp__content">
           <div class="xp__date">Giugno 2024 - Presente</div>
           <div class="xp__meta">
             <span>Volontariato | Vastogirardi (IS)</span>
           </div>
           <p>Socio Pro Loco di Vastogirardi</p>
-        </article>
-      </div>
-      <div class="xp__line"></div>
-      <div class="xp__lineProgress" id="xpLineProgress2"></div>
+        </div>
+      </article>
+
     </div>
 
+    <!-- Titolo destra -->
     <div class="xp__rightTitle">
-      <h2>INCARICHI E<br> VOLONTARIATO</h2>
+      <h2>INCARICHI E VOLONTARIATO</h2>
     </div>
 
   </div>
 </section>
+
 
 <!--SKILLS-->
 <section class="skills" id="skills">
@@ -311,6 +319,12 @@
         <img src="./img/java_logo.jpg" alt="Java">
       </div>
       <p class="skillCard__label">Java</p>
+    </div>
+    <div class="skillCard">
+      <div class="skillCard__icon">
+        <img src="./img/wordpress.jpg" alt="wordpress">
+      </div>
+      <p class="skillCard__label">WordPress</p>
     </div>
     <div class="skillCard">
       <div class="skillCard__icon">

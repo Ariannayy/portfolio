@@ -2,6 +2,7 @@
 const text = "Explore my portfolio...";
 const el = document.getElementById("typeText");
 
+if (el){
 const speed = 80;   // velocità scrittura
 const delay = 2000; // pausa tra una scrittura e l'altra
 
@@ -20,6 +21,8 @@ function typeLoop() {
   }, speed);
 }
 typeLoop();
+}
+
 
 // Timeline esperienze 
 const reveals = document.querySelectorAll(".reveal");
@@ -65,4 +68,39 @@ const obs = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 
 animated.forEach(el => obs.observe(el));
+
+// VIASUALIZZAZIONE SECONDA PAGINA
+// VISUALIZZAZIONE SECONDA PAGINA (projects.html)
+$(document).ready(function () {
+  if ($(".progetti").length === 0) return;
+
+  // nascondo tutto all'avvio
+  $(".progetti").hide();
+  $(".divisore").hide();
+
+  function showGroup(groupSelector) {
+    
+    // nascondo l'altro gruppo
+    $(".progetti").not(groupSelector).stop(true, true).hide();
+    // reset animazione (così rientra se riclicchi)
+    $(groupSelector).removeClass("in-view");
+
+    // mostro il gruppo scelto
+    $(groupSelector).stop(true, true).fadeIn(300);
+
+    // scroll alla prima section del gruppo
+    const $first = $(groupSelector).first();
+    if ($first.length) {
+      $("html, body").animate({ scrollTop: $first.offset().top - 40 }, 450);
+    }
+  }
+
+  $("#opzione1").on("click", function () {
+    showGroup(".gruppo1");
+  });
+
+  $("#opzione2").on("click", function () {
+    showGroup(".gruppo2");
+  });
+});
 

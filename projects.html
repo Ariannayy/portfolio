@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arianna Di Serio – Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    <header class="hero">
+    <div class="line line--top"></div>
+    <!-- Menu -->
+    <nav class="nav">
+      <a href="./index.html" class="nav__link">HOME</a>
+      <a href="./projects.html" class="nav__link active">PORTFOLIO</a>
+    </nav>
+
+    <div class="hero__center">
+      <h1 class="hero__title">
+        PROGETTI
+      </h1>
+    </div>
+    <div class="hero__footer">
+      <div class="line line--bottom"></div>
+    </div>
+  </header>
+
+    <section class="explorer2" id="projects">
+        <!-- MENU -->
+        <div class="menu_projects" id="opzione1">
+            <img src="./img/design2.jpg" alt="About me" />
+            <h3>Web Development & Design</h3>
+            <p>Full-Stack Development<br/>Web Design<br/>Responsive Design<br/>UX/UI Design</p>
+        </div>
+        <div class="menu_projects" id="opzione2">
+            <img src="./img/grafica2.jpg" alt="Esperienze" />
+            <h3>Graphic & Presentation Design</h3>
+            <p>Progetti grafici<br/>Prodotti multimediali<br/>Impaginazione<br/>Presentazioni</p>
+        </div>
+    </section>
+
+    <!--PROGETTI-->
+    <!--GRUPPO 1-->
+  <section id="projectEmpatica" class="progetti gruppo1 anim-up">
+    <!--LATO SINISTRO-->
+    <div id="left">
+      <h3>Android App e Sito Web per l'Emotion Recognition | 2024 </h3>
+      <div class="categories">
+        <span>Android Studio</span>
+        <span>Java</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Javascript</span>
+        <span>Chart.js</span>
+        <span>JQuery</span>
+        <span>Python</span>
+        <span>Adobe Illustrator</span>
+        <span>Adobe Photoshop</span>
+        <span>MLP classifier</span>
+        <span>Firebase</span>
+        <span>User Test</span>
+      </div>
+      <p class="descrizione">Sviluppo di un'applicazione in Android Studio in grado di connettersi via Bluetooth all'orologio Empatica E4, acquisirne i dati (parametri fisiologici rilevati attraverso appositi sensori) e salvarli in un database Firebase. 
+      Implementazione di un classificatore e sviluppo di una piattaforma web per la visione completa dei dati. 
+      Test utente e data analysis per la valutazione del sistema implementato.</p>
+    </div>
+    <!--LATO DESTRO-->
+    <div class="right">
+      <video autoplay muted loop><source src="./img/videoEmpatica.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+      <img src="./img/mockup1.png" alt="mockup sito web"/>
+    </div>
+  </section>
+  <hr class="divisore gruppo1 anim-up" style="background-color: orangered;"/>
+  
+  <section id="projectDJ" class="progetti gruppo1 anim-up">
+    <video autoplay muted loop><source src="./img/sitoDJ.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+    <div>
+      <h3>Sito web sulla tematica “Le principali cause di decesso dei giovani in Italia” | Luglio 2023</h3>
+      <div class="categories">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Javascript</span>
+        <span>Python</span>
+        <span>Web scraping</span>
+        <span>Analisi Dati</span>
+      </div>
+      <p class="descrizione">Corso di <i>Data Journalism</i>.<br/>
+      Ricerca e data analysis di dataset provenienti dall'ISTAT: selezione ed esplorazione dei dataset, analisi statistica dei dati, creazione grafici interattivi.</p>
+      <a href="https://https://github.com/Ariannayy/website_datajournalism.git">
+        <img class="iconaGit" src="./img/github.png" alt="icona di github"/>
+      </a>
+    </div>
+  </section>
+  <hr class="divisore gruppo1 anim-up" style="background-color: #2f5f86;"/>
+
+ <section id="projectItinerari" class="progetti gruppo1 anim-up">
+    <div>
+      <h3>Sito web e profili social: Itinerari nel Rinascimento</h3>
+      <div class="categories">
+        <span>Wordpress</span>
+        <span>Adobe Illustrator</span>
+        <span>Adobe Photoshop</span>
+        <span>Adobe Premiere</span>
+        <span>Mauve++</span>
+        <span>SiteImprove</span>
+        <span>Usabilità</span>
+        <span>Accessibilità</span>
+        <span>Instagram e Facebook</span>
+      </div>
+      <p class="descrizione">Piattaforma web per il progetto "Itinerari nel Rinascimento" dell'Agenzia di viaggio <i>...da Vì Travels</i> di Stefania Tielli.
+      Profili social, grafiche personalizzate, test di accessibilità e usabilità. 
+      Progetto di tesi magistrale nel 2021 e di Tirocinio 2022/2023.</p>
+    </div>
+    <div id="imgSito">
+      <img id="screen" src="./img/web.png" alt="screen sito web"/>
+      <video autoplay muted loop><source src="./img/ig.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+    </div>
+  </section>
+   <hr class="divisore gruppo1 anim-up" style="background-color: green;"/>
+
+  <section id="projectVideogioco" class="progetti gruppo1 anim-up">
+    <div>
+      <img src="./img/unity.png" alt="interfaccia Unity del Videogioco"/>
+      <video autoplay muted loop><source src="./img/gioco.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+    </div>
+    <div>
+      <h3>Videogioco in Unity | Giugno 2023</h3>
+      <div class="categories">
+        <span>Unity</span>
+        <span>C#</span>
+      </div>
+      <p class="descrizione">Corso di <i>Ambienti Virtuali</i>.<br/>Videogioco realizzato in Unity.<br/>Scopo del gioco: completare la missione raccogliendo le monete d'oro sparse nell'ambientazione senza essere uccisi dal nemico.</p>
+      <a href="https://github.com/Ariannads99/ambienti_virtuali.git">
+        <img class="iconaGit" src="./img/github.png" alt="icona di github"/>
+      </a>
+    </div>
+  </section>
+
+  <!--GRUPPO 2-->
+  <section id="projectPPT" class="progetti gruppo2 anim-up">
+    <h3>Grafiche Presentazioni Canva e Power Point | Progetti su <a id="linkFiver" href="https://it.fiverr.com/s/zWppLXb">Fiverr</a> - 2025 e 2026</h3>
+    <div class="categories">
+      <span>Canva</span>
+      <span>Power Point</span>
+      <span>Instagram</span>
+    </div>
+    <div class="grigliaEsempi">
+      <video autoplay muted loop><source src="./img/canva1.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+      <video autoplay muted loop><source src="./img/ppt3.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+      <video autoplay muted loop><source src="./img/canva4.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+      <video autoplay muted loop><source src="./img/canva2.mp4" type="video/mp4">Your browser does not support the video tag.</video>      
+    </div>
+  </section>
+  <hr class="divisore gruppo2 anim-up" style="background-color: #b5cce0;"/>
+
+  <section id="projectPannelli" class="progetti gruppo2 anim-up">
+    <h3>Pannelli per mostra museale | Gennaio 2024</h3>
+    <p>Corso di <i>Storia Pubblica Digitale</i>. Grafica di pannelli per una mostra museale sul tema: “Cancel Culture: il caso della statua di Costanzo Ciano a La Spezia”</p>
+    <div class="categories">
+      <span>Adobe Illustrator</span>
+      <span>Adobe Photoshop</span>
+    </div>
+    <div id="img">
+      <img src="./img/pannelli-01.png" alt="pannello mostra"/>
+      <img src="./img/pannelli-02.png" alt="pannello mostra"/>
+      <img src="./img/pannelli-03.png" alt="pannello mostra"/>
+    </div>
+  </section>
+  <hr class="divisore gruppo2 anim-up" style="background-color: rgb(226, 188, 160);"/>
+
+  <section id="projectLibro" class="progetti gruppo2 anim-up">
+    <h3>Libro cartaceo | Luglio 2022</h3>
+    <p style="margin-top: 1%;">Corso di <i>Editoria Digitale</i>. Creazione di un libro per la stampa, sulla tematica "ricette di dolci".</p>
+    <div class="categories" style="margin-top:2%; margin-bottom:2%">
+      <span>Adobe Illustrator</span>
+      <span>Adobe InDesign</span>
+      <span>Adobe Photoshop</span>
+    </div>
+    <div class="grigliaEsempi">
+      <img src="./img/ricetta1.png" alt="pagine di esempio del libro"/>
+      <img src="./img/ricetta2.png" alt="pagine di esempio del libro"/>
+      <img src="./img/ricetta3.png" alt="pagine di esempio del libro"/>
+      <img src="./img/ricetta4.png" alt="pagine di esempio del libro"/>
+    </div>
+  </section>
+  <hr class="divisore gruppo2 anim-up" style="background-color: #c6385e;"/>
+
+  <section id="projectPatch" class="progetti gruppo2 anim-up">
+    <h3>Patch decorativa | Vigili del fuoco di Isernia | Giugno 2021</h3>
+    <p style="margin-top: 1%;">Patch decorativa realizzato per I Vigili del Fuoco di Isernia, per l'attività "Mainarde Search and Rescue 2021".</p>
+    <div class="categories" style="margin-top:1%; margin-bottom:2%">
+      <span>Adobe Illustrator</span>
+    </div>
+    <div class="grigliaEsempi">
+      <img id="patchG" src="./img/patch_grafica.png" alt="patch"/>
+      <img id="patchV" src="./img/patch.png" alt="patch"/>
+    </div>
+  </section>
+
+<script src="script.js"></script>
+</body>
+</html>
