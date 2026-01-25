@@ -305,7 +305,7 @@ body {
   border-radius: 10px;
   color:#111;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 1px;
   transition: transform .15s ease, box-shadow .15s ease;
 }
@@ -494,27 +494,19 @@ body {
 }
 .xp__rightTitle{
   bottom: 0;
-  right: 0;
+  right: 10%;
   text-align: right;
 }
 .xp__leftTitle h2,
 .xp__rightTitle h2{
   color:#f3b3c0;
   font-weight: 800;
-  letter-spacing: 2px;
   font-size: 50px;
   line-height: 1.2;
   opacity: .88;
 }
 .xp__leftTitle{
   left: -50px;
-}
-.xp__leftTitle h2{
-  transform: none;
-}
-.xp__rightTitle h2{
-  transform: translateX(12px);
-  text-align: right;
 }
 .xp__timeline{
   --pad-left: 250px;
@@ -776,6 +768,7 @@ body {
   color: black;
   font-weight: bold;
   text-decoration: none;
+  font-weight: 600;
 }
 .linkP:hover{
   color: #c6385e;
@@ -1118,6 +1111,9 @@ hr{
     width: 50%;
     margin-left: 0%;
   }
+  .explorer{
+    padding-bottom: 4%;
+  }
   .explorer2 div:first-child{
     margin-left: 40%;
    }
@@ -1349,18 +1345,15 @@ hr{
   .folder:nth-child(1){ grid-column: 1 / span 2; grid-row: 1; }
   .folder:nth-child(2){ grid-column: 3 / span 2; grid-row: 1; }
   .folder:nth-child(3){ grid-column: 5 / span 2; grid-row: 1; }
-
   /* riga 2 (centrate) */
   .folder:nth-child(4){ grid-column: 2 / span 2; grid-row: 2; }
   .folder:nth-child(5){ grid-column: 4 / span 2; grid-row: 2; }
-
   .folder img {
     width: 70%;
   }
   .folder p {
     width: 85%;
-  }
-  
+  }  
   .about__photoWrap{
     width: 70%;
     margin-left: 15%;
@@ -1377,6 +1370,12 @@ hr{
   .xp__wrap{
     width: 100%;
     margin: 0;
+  }
+  .xp__leftTitle{
+    margin-bottom: 2%;
+  }
+  .xp__sectionDivider::after {
+    padding-left: 5%;
   }
   .bottomGrid .xp__line, .bottomGrid .xp__lineProgress {
     left: 374px;
@@ -1554,11 +1553,10 @@ hr{
   }
   .xp__sectionDivider::after{
     content: "INCARICHI E VOLONTARIATO";
-    display: block;
+    display: inline-block;
     text-align: left;
     color:#f3b3c0;
     font-weight: 800;
-    letter-spacing: 2px;
     font-size: clamp(28px, 6vw, 40px);
     line-height: 1.02;
     opacity: .88;
@@ -1584,13 +1582,14 @@ hr{
     justify-items: center;
   }
   .folder{
-    width: 80%;
+    width: 100%;
+    max-width: 250px;
     grid-area: auto !important; 
     grid-column: auto !important;
     justify-self: center;
   }
   .folder p{
-    width: fit-content;
+    width: 70%;
     padding-left: 5px;
     padding-right: 5px;
     font-size: 15px;
@@ -1628,18 +1627,24 @@ hr{
   }
   #corsi{
     padding: 0px 30px;
+    padding-right: 0;
   }
   .grid_corsi {
     grid-template-columns: 50% 50%;
 }
   #scontrino {
-    width: 95%;
-    margin-left: 15%;
+    width: 90%;
     margin-top: -35%;
   }
+  #pubblicazioni{
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
   #pubb{
-    width: 100%;
+    width: 90%;
     padding-left: 20px;
+    font-size: 15px;
   }
   .explorer2 div:first-child, .explorer2 div:last-child{
     width: 80%;
@@ -1694,13 +1699,13 @@ hr{
     justify-items: center;
   }
   .folder{
-    width: 80%;
+    width: 100%;
     grid-area: auto !important; 
     grid-column: auto !important;
     justify-self: center;
   }
   .folder p{
-    width: fit-content;
+    width: 70%;
     padding-left: 5px;
     padding-right: 5px;
     font-size: 15px;
@@ -1783,6 +1788,12 @@ hr{
     width: 100%;
     margin-left: 0%;
   }
+  #about{
+    padding-top: 20px;
+  }
+  .explorer{
+    padding-bottom: 20px;
+  }
   #projectPPT .categories{
     margin-bottom: 5%;
     margin-top: 5%;
@@ -1790,11 +1801,9 @@ hr{
   .progetti.gruppo1{
     padding: 20px 14px;
   }
-
   .progetti.gruppo1 h3{
     font-size: 18px;
   }
-
   .progetti.gruppo1 .categories span{
     font-size: 12.5px;
     padding: 8px 10px;
@@ -1808,6 +1817,31 @@ hr{
   #projectEmpatica .right img{
     width: 40%;
     margin-left: 30%;
+  }
+  #corsi1 .xp__meta, #corsi2 .xp__meta{
+    text-align: center;
+  }
+  .xp__leftTitle h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  .xp__sectionDivider::after {
+    font-size: 2.3em;
+    text-align: center;
+    padding: 0;
+    padding-left: 20px;
+    margin-bottom: 40px;
+  }
+  #pub_grid{
+    display: block;
+  }
+  #pub_grid img{
+    display: none;
+  }
+  #pubb{
+    width: 90%;
+    margin-left: 5%;
+    padding-left: 20px;
   }
 }
 
@@ -1824,6 +1858,16 @@ hr{
     margin-left: 15%;
     margin-top: -15%;
   }
+  .folder p{
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+  .about__photo {
+    width: 60%;
+  }
+  .about__photoWrap{
+    margin-top: -8%;
+  }
   .contactCard {
     height: fit-content;
     width: 80%;
@@ -1837,7 +1881,7 @@ hr{
     font-size: 16px;
   }
   .edu{
-    height: 80vh;
+    height: 60vh;
   }
   #corsi{
     padding: 0px 20px;
@@ -1890,15 +1934,29 @@ hr{
     width: 100%;
     margin-left: 0%;
   }
+  #pubblicazioni{
+    padding: 20px;
+  }
+  .xp__timeline {
+    --pad-right:0px;
+  }
+  #corsi{
+    margin-top: 6%;
+    margin-bottom: 6%;
+  }
+  #about{
+    padding-top: 0;
+  }
+  .xp__sectionDivider::after {
+    margin-bottom: 10px;
+  }
 }
 
 
 @media (max-width: 520px){
   .skills__grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .skillCard{ width: 150px; }
-
   .folder { width: min(420px, 92vw); }
-
   .line--bottom, .line--top{
     width: 100px;
   }
@@ -1937,11 +1995,14 @@ hr{
   .about__grid{
     gap:0px;
   }
+  .about__photo{
+    width: 60%;
+  }
+  .about__photoWrap{
+    margin-top: 1%;
+  }
   .edu__card h3{
     font-size: 16px;
-  }
-  .edu{
-    height: 80vh;
   }
   .xp__leftTitle h2{
     text-align:center;
@@ -1964,16 +2025,6 @@ hr{
     width: 80%;
     margin-left: 10%;
   }
-  #pub_grid{
-    display: block;
-  }
-  #pub_grid img{
-    display: none;
-  }
-  #pubb{
-    width: 100%;
-    padding-left: 20px;
-  }
   .progetti h3{
     font-size: 18px;
   }
@@ -1986,6 +2037,14 @@ hr{
   #patchG, #pacthV, .grigliaEsempi img{
     width: 100%;
     margin-left: 0%;
+  }
+  .folder{
+    width: 100%;
+  }
+  .folder p{
+    font-size: 14px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   /* GRUPPO 1*/
   .progetti.gruppo1{
@@ -2000,5 +2059,43 @@ hr{
   .progetti.gruppo1 .categories span{
     font-size: 12px;
     padding: 7px 9px;
+  }
+  .xp__sectionDivider::after {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 450px){
+ .hero__title{
+  font-size: clamp(3rem, 8vw, 7rem);
+ }
+ .hero__signature{
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+ }
+ .nav{
+  right: 25px;
+  top: 30px;
+ }
+ .year{
+  margin-top: -30%;
+ }
+  .about__cvBtn {
+    margin-left: 30%;
+    width: 40%;
+  }
+  #corsi h2{
+    letter-spacing: 0;
+    font-size: 1.8em;
+    padding-left: 6%;
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 360px){
+  #corsi h2{
+    font-size: 1.5em;
+    padding: 0;
   }
 }
