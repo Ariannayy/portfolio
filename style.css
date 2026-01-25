@@ -776,6 +776,8 @@ body {
 }
 #pubb ul li{
   margin-bottom: 25px;
+  list-style: none;
+  list-style-type: circle;
 }
 
 
@@ -1913,6 +1915,7 @@ hr{
   }
   #pubb ul li {
     font-size: 14px;
+
   }
   .xp__rightTitle{
     margin-bottom: 2%;
