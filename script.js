@@ -69,38 +69,58 @@ const obs = new IntersectionObserver((entries) => {
 
 animated.forEach(el => obs.observe(el));
 
-// VIASUALIZZAZIONE SECONDA PAGINA
 // VISUALIZZAZIONE SECONDA PAGINA (projects.html)
-$(document).ready(function () {
-  if ($(".progetti").length === 0) return;
+$(function () {
+  // esegui solo su projects.html
+  if ($("#projects").length === 0) return;
 
-  // nascondo tutto all'avvio
-  $(".progetti").hide();
-  $(".divisore").hide();
+  const $projects = $(".progetti");
+  const $divisori = $("hr.divisore");
 
-  function showGroup(groupSelector) {
-    
-    // nascondo l'altro gruppo
-    $(".progetti").not(groupSelector).stop(true, true).hide();
-    // reset animazione (così rientra se riclicchi)
-    $(groupSelector).removeClass("in-view");
+  // tutto nascosto all'avvio
+  $projects.hide();
+  $divisori.hide();
 
-    // mostro il gruppo scelto
-    $(groupSelector).stop(true, true).fadeIn(300);
+  // helper: reset animazioni ogni volta (anche al riclick)
+  function replayInView($els) {
+    $els.removeClass("in-view");
 
-    // scroll alla prima section del gruppo
-    const $first = $(groupSelector).first();
+    // forza reflow (così il browser "vede" il reset)
+    void $els.get(0)?.offsetHeight;
+
+    // riaggiungi classe subito dopo
+    setTimeout(() => $els.addClass("in-view"), 20);
+  }
+
+  function showGroup(groupClass) {
+    const $groupProjects = $projects.filter(groupClass);
+    const $groupDivisori = $divisori.filter(groupClass);
+
+    const $otherProjects = $projects.not(groupClass);
+    const $otherDivisori = $divisori.not(groupClass);
+
+    // nascondi altro gruppo (progetti + divisori)
+    $otherProjects.stop(true, true).hide();
+    $otherDivisori.stop(true, true).hide();
+
+    // mostra gruppo scelto
+    $groupProjects.stop(true, true).fadeIn(250);
+    $groupDivisori.stop(true, true).fadeIn(250);
+
+    // rigioca animazioni (progetti + divisori)
+    replayInView($groupProjects.add($groupDivisori));
+
+    // scroll al primo elemento del gruppo
+    const $first = $groupProjects.first();
     if ($first.length) {
-      $("html, body").animate({ scrollTop: $first.offset().top - 40 }, 450);
+      $("html, body")
+        .stop(true)
+        .animate({ scrollTop: $first.offset().top - 40 }, 400);
     }
   }
 
-  $("#opzione1").on("click", function () {
-    showGroup(".gruppo1");
-  });
-
-  $("#opzione2").on("click", function () {
-    showGroup(".gruppo2");
-  });
+  $("#opzione1").on("click", () => showGroup(".gruppo1"));
+  $("#opzione2").on("click", () => showGroup(".gruppo2"));
 });
+
 
