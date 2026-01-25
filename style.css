@@ -73,21 +73,104 @@ body {
 .nav__link {
   color: white;
   text-decoration: none;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 20px;
+  position: relative;
+  cursor: pointer;
+}
+.nav__link:hover{
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.25);
+}
+/* ===== STICKY NAV (white, centered) ===== */
+.nav--sticky{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+
+  padding: 18px 0;
+  background: #fff;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  z-index: 999;
+
+  /* nascosta di default */
+  opacity: 0;
+  transform: translateY(-100%);
+  pointer-events: none;
+
+  transition: transform .3s ease, opacity .3s ease;
+}
+.nav--sticky.is-visible{
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.nav--sticky .nav__link{
+  color: #111;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.nav__link.active{
+  font-weight: 600;
+}
+
+/* link comune */
+.nav__link{
+  text-decoration: none;
   font-weight: 600;
   letter-spacing: 2px;
   font-size: 20px;
   position: relative;
   cursor: pointer;
 }
-.nav__link.active{
-  font-weight: bold;
-}
 
-.nav__link:hover{
-  text-decoration: underline;
-  text-underline-offset: 6px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.25);
+/* HERO NAV */
+.nav--hero{
+  position: absolute;
+  top: 40px;
+  right: 60px;
+  display: flex;
+  gap: 40px;
+  z-index: 10;
 }
+.nav--hero .nav__link{ color: #fff; }
+
+/* STICKY NAV */
+.nav--sticky{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  padding: 12px 0;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  z-index: 999;
+  opacity: 0;
+  transform: translateY(-100%);
+  pointer-events: none;
+  transition: transform .3s ease, opacity .3s ease;
+}
+.nav--sticky.is-visible{
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.nav--sticky .nav__link{ color: #111; font-size: 14px;}
+.nav--sticky .nav__link:hover{ text-shadow: none; }
+
 
 /* TITOLO CENTRALE */
 .hero__center {

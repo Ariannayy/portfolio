@@ -123,4 +123,22 @@ $(function () {
   $("#opzione2").on("click", () => showGroup(".gruppo2"));
 });
 
+//MENU 
+$(function(){
+  const $stickyNav = $('.nav--sticky');
+  const $header = $('.hero');
+
+  if (!$stickyNav.length || !$header.length) return;
+
+  const triggerPoint = $header.outerHeight() - 20;
+
+  $(window).on('scroll', function(){
+    if ($(window).scrollTop() > triggerPoint){
+      $stickyNav.addClass('is-visible');
+    } else {
+      $stickyNav.removeClass('is-visible');
+    }
+  });
+});
+
 
