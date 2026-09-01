@@ -454,6 +454,9 @@ body {
   height: 22px;
   display:block;
 }
+.mail{
+  height: 16px;
+}
 .anim-up, .anim-right{
   opacity: 0;
   transition: opacity .7s ease, transform .7s ease;
@@ -759,7 +762,8 @@ body {
   width: 100%;
   margin: 0;
   padding-left: 150px;
-  margin-top: 50px;
+  
+  padding-top:50px
 }
 #corsi h2, #pubblicazioni h2{
   color:#f3b3c0;
@@ -771,7 +775,7 @@ body {
 }
 #scontrino{
   width: 50%;
-  margin-top: -25%;
+  margin-top: -20%;
   margin-left: 35%;
 }
 .in-view{
@@ -804,7 +808,7 @@ body {
 #corsi1 .xp__meta, #corsi2 .xp__meta{
   font-size: 18px;
 }
-#corsi2 ul{
+#corsi2 ul, #corsi1 ul{
   list-style-position: inside;
   padding-left: 1.5em;
   line-height: 30px;
@@ -850,9 +854,8 @@ body {
 
 .linkP{
   color: black;
-  font-weight: bold;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
 }
 .linkP:hover{
   color: #c6385e;
@@ -925,6 +928,9 @@ footer p strong a:hover{
   margin-top: 5%;
   color: black;
   text-decoration: none;
+}
+.menu_projects p{
+  line-height: 30px;
 }
 .progetti{
   margin-bottom: 2%;
@@ -1066,11 +1072,6 @@ hr{
 }
 #projectVideogioco div img{
   width: 100%;
-  align-self: center;
-}
-#projectVideogioco div video{
-  width: 100%;
-  margin-top: 5%;
   align-self: center;
 }
 #projectVideogioco div:first-child{
@@ -1352,11 +1353,6 @@ hr{
     text-align: left;
     width: 100%;
     margin: 12px 0 14px;
-  }
-  #projectVideogioco div video{
-    width: 100%;
-    max-width: 720px;
-    margin-top: 10px;
   }
   #projectVideogioco div:first-child{
     order: 2;
@@ -1908,13 +1904,10 @@ hr{
   #projectVideogioco div:first-child {
     display: block;
   }
-  #projectVideogioco div img {
+ #projectVideogioco div img {
     width: 100%;
     padding: 0;
     margin: 0;
-  }
-  #projectVideogioco div video, #projectVideogioco div img {
-    width: 80%;
     margin-left: 10%;
   }
   #corsi1 .xp__meta, #corsi2 .xp__meta{

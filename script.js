@@ -69,6 +69,38 @@ const obs = new IntersectionObserver((entries) => {
 
 animated.forEach(el => obs.observe(el));
 
+// Velocità di scroll menù a cartelle
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const target = document.querySelector(this.getAttribute('href'));
+    const start = window.scrollY;
+    const end = target.getBoundingClientRect().top + window.scrollY;
+    const duration = 1000; // millisecondi
+
+    const startTime = performance.now();
+
+    function scrollAnimation(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+
+      // effetto "ease-in-out"
+      const ease = progress < 0.5
+        ? 2 * progress * progress
+        : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+
+      window.scrollTo(0, start + (end - start) * ease);
+
+      if (progress < 1) {
+        requestAnimationFrame(scrollAnimation);
+      }
+    }
+
+    requestAnimationFrame(scrollAnimation);
+  });
+});
+
 // VISUALIZZAZIONE SECONDA PAGINA (projects.html)
 $(function () {
   // esegui solo su projects.html
