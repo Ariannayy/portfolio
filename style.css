@@ -54,7 +54,7 @@ body {
 }
 .line--bottom {
   right: -50px;
-  bottom: 40px;
+  bottom: 20px;
   width: 320px;
   animation-delay: 0.8s;
   transform-origin: right;
@@ -216,8 +216,9 @@ body {
 
 .year {
   color: white;
-  font-size: 24px;
+  font-size: 40px;
   letter-spacing: 2px;
+  width: 20%;
 }
 
 /* ---------- MENU FOLDERS ---------- */
@@ -690,28 +691,56 @@ body {
 .skills{
   background: white;              
   padding: 48px 0 64px;
+  padding-bottom:0px;
 }
 
 .skills__title{
-  text-align:center;
+  text-align:left;
   color:#f0abbd;
   font-weight:800;
   letter-spacing:2px;
   font-size: clamp(40px, 5vw, 64px);
   margin: 0 0 28px;
+  padding-left: 50px;
 }
-
+#griglia_sezione_skills{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  align-items: start;
+  margin-top: 2%;
+}
 .skills__grid{
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 28px;
-
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr)); /* 5 in riga */
   gap: 26px;
   justify-items: center;
 }
-
+#scontrino{
+  width: 90%;
+  margin-top:-20%;
+  padding-left: 10%;
+}
+.in-view{
+  opacity: 1;
+  transform: translateY(0);
+}
+.anim-down{
+  opacity: 0;
+  transform: translateY(-28px);
+  transition: opacity .7s ease, transform .7s ease;
+  will-change: opacity, transform;
+}
+.anim-down.in-view,
+.anim-up.in-view,
+.anim-right.in-view,
+.anim-left.in-view{
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
 
 /* card */
 .skillCard{
@@ -757,69 +786,6 @@ body {
   text-align:center;
 }
 
-/*----------CORSI-----------*/
-#corsi{
-  width: 100%;
-  margin: 0;
-  padding-left: 150px;
-  
-  padding-top:50px
-}
-#corsi h2, #pubblicazioni h2{
-  color:#f3b3c0;
-  font-weight: 800;
-  letter-spacing: 2px;
-  font-size: clamp(34px, 4vw, 54px);
-  line-height: 1.02;
-  text-align: left;
-}
-#scontrino{
-  width: 50%;
-  margin-top: -20%;
-  margin-left: 35%;
-}
-.in-view{
-  opacity: 1;
-  transform: translateY(0);
-}
-.grid_corsi{
-  width: 100%;
-  display: grid;
-  grid-template-columns: 30% 70%;
-}
-.anim-down{
-  opacity: 0;
-  transform: translateY(-28px);
-  transition: opacity .7s ease, transform .7s ease;
-  will-change: opacity, transform;
-}
-.anim-down.in-view,
-.anim-up.in-view,
-.anim-right.in-view,
-.anim-left.in-view{
-  opacity: 1;
-  transform: translateX(0) translateY(0);
-}
-
-#corsi1{
-  margin-bottom: 30px;
-  margin-top: 8%;
-}
-#corsi1 .xp__meta, #corsi2 .xp__meta{
-  font-size: 18px;
-}
-#corsi2 ul, #corsi1 ul{
-  list-style-position: inside;
-  padding-left: 1.5em;
-  line-height: 30px;
-}
-.anim-left{
-  opacity: 0;
-  transform: translateX(-28px);
-  transition: opacity .7s ease, transform .7s ease;
-  will-change: opacity, transform;
-}
-
 
 /*-------PUBBLICAZIONI--------*/
 #pubblicazioni{
@@ -829,6 +795,11 @@ body {
 }
 #pubblicazioni h2{
   text-align: center;
+  color:#f0abbd;
+  font-weight:800;
+  letter-spacing:2px;
+  font-size: clamp(40px, 5vw, 64px);
+  margin: 0 0 28px;
 }
 #pub_grid{
   display: grid;
@@ -1241,6 +1212,16 @@ hr{
   .xp__item--compact .xp__content{
     margin-left: calc(-1 * var(--left-block-width) - 20px);
   }
+  #scontrino{
+    width: 90%;
+    margin:0;
+    padding:0;
+    margin-top: -25%;
+    margin-left: 5%;
+  }
+  .skills__grid{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 1200px){
@@ -1297,6 +1278,20 @@ hr{
   }
   .xp__item--compact .xp__content{
     margin-left: calc(-1 * var(--left-block-width) - 20px);
+  }
+    .skillCard{
+    width: 120px;
+    height: 120px;
+  }
+  #scontrino{
+    width: 90%;
+    margin:0;
+    padding:0;
+    margin-top: -25%;
+    margin-left: 5%;
+  }
+  .skills__grid{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
@@ -1363,6 +1358,20 @@ hr{
   }
   #projectVideogioco div img {
     margin-left: 0%;
+  }
+  .skillCard{
+    width: 120px;
+    height: 120px;
+  }
+  #scontrino{
+    width: 90%;
+    margin:0;
+    padding:0;
+    margin-top: -25%;
+    margin-left: 5%;
+  }
+  .skills__grid{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
@@ -1472,12 +1481,6 @@ hr{
   .skills {
     background: white;
     padding: 0px 0 70px;
-  }
-  #corsi {
-    padding-left: 50px;
-  }
-  .grid_corsi {
-    grid-template-columns: 50% 50%;
   }
   #scontrino{
     width: 90%;
@@ -1640,6 +1643,16 @@ hr{
     padding-right: 0;
     text-align: center;
   }
+  .skillCard{
+    width: 120px;
+    height: 120px;
+  }
+  #scontrino{
+    width: 100%;
+    margin:0;
+    padding:0;
+    margin-top: -25%;
+  }
 }
 
 
@@ -1702,13 +1715,6 @@ hr{
     padding-top: 10px;
     padding-bottom: 8%;
   }
-  #corsi{
-    padding: 0px 30px;
-    padding-right: 0;
-  }
-  .grid_corsi {
-    grid-template-columns: 50% 50%;
-}
   #scontrino {
     width: 90%;
     margin-top: -35%;
@@ -1750,6 +1756,19 @@ hr{
   #projectDJ video{
     width: 100%;
     margin: 0;
+  }
+     #griglia_sezione_skills{
+    display: block;
+    width: 100%;
+  }
+  #scontrino{
+    display: none;
+  }
+  .skills__title{
+    padding-left: 10px;
+    width: 100%;
+    font-size: 2.5em;
+    text-align: center;
   }
 }
 
@@ -1818,21 +1837,6 @@ hr{
   #skills{
     padding-top: 20px;
     padding-bottom: 20px;
-  }
-  #corsi{
-    padding: 0px 20px;
-  }
-  #corsi h2{
-    text-align: center;
-  }
-  .grid_corsi{
-    width: 90%;
-    margin-left: 5%;
-    display: block;
-    text-align: center;
-  }
-  #corsi2 ul{
-    padding-left: 0;
   }
   #scontrino {
     display: none;
@@ -1961,9 +1965,6 @@ hr{
   .edu{
     height: fit-content;
   }
-  #corsi{
-    padding: 0px 20px;
-  }
   .cert_photo {
     display: none;
   }
@@ -1972,24 +1973,12 @@ hr{
     margin-left: 5%;
     display: block;
   }
-  #corsi h2{
-    text-align: center;
-  }
   #pubb ul li {
     font-size: 14px;
 
   }
   .xp__rightTitle{
     margin-bottom: 2%;
-  }
-  #corsi{
-    margin-top: 2%;
-  }
-  .grid_corsi{
-    text-align: center;
-  }
-  #corsi ul{
-    padding-left: 0;
   }
   .grigliaEsempi video:first-child, 
   .grigliaEsempi video:nth-child(2), 
@@ -2019,10 +2008,6 @@ hr{
   .xp__timeline {
     --pad-right:0px;
   }
-  #corsi{
-    margin-top: 6%;
-    margin-bottom: 6%;
-  }
   #about{
     padding-top: 0;
   }
@@ -2036,6 +2021,19 @@ hr{
   #projectVideogioco div img{
     width: 100%;
     margin-left: 0%;
+  }
+  #griglia_sezione_skills{
+    display: block;
+    width: 100%;
+  }
+  #scontrino{
+    display: none;
+  }
+  .skills__title{
+    padding-left: 10px;
+    width: 100%;
+    font-size: 2.5em;
+    text-align: center;
   }
 }
 
@@ -2094,9 +2092,6 @@ hr{
   .xp__leftTitle h2{
     text-align:center;
   }
-  #corsi{
-    padding: 0px 20px;
-  }
   .cert_photo {
     display: none;
   }
@@ -2104,9 +2099,6 @@ hr{
     width: 90%;
     margin-left: 5%;
     display: block;
-  }
-  #corsi h2{
-    text-align: center;
   }
   footer p{
     width: 80%;
@@ -2157,6 +2149,19 @@ hr{
   .xp__sectionDivider::after {
     font-size: 2em;
   }
+     #griglia_sezione_skills{
+    display: block;
+    width: 100%;
+  }
+  #scontrino{
+    display: none;
+  }
+  .skills__title{
+    padding-left: 10px;
+    width: 100%;
+    font-size: 2.5em;
+    text-align: center;
+  }
 }
 
 @media (max-width: 450px){
@@ -2180,14 +2185,6 @@ hr{
     margin-left: 30%;
     width: 40%;
   }
-  #corsi h2{
-    letter-spacing: 0;
-    font-size: 1.8em;
-    padding-left: 6%;
-    width: 100%;
-    text-align: center;
-    margin-left: 0;
-  }
   .nav__link{
     font-size: 15px;
   }
@@ -2204,11 +2201,19 @@ hr{
 }
 
 @media (max-width: 360px){
-  #corsi h2{
-    font-size: 1.5em;
-    padding: 0;
-  }
   .line{
     display: none;
+  }
+  .skills__grid{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+  }
+  .skillCard{
+    width: 100%;
+  }
+  .skills__title{
+    font-size: 2em;
   }
 }
